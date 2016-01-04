@@ -387,7 +387,7 @@ function terminator(routes, delimiter, start, stop) {
   return routes;
 }
 
-var QUERY_SEPARATOR = /\?.*/;
+// var QUERY_SEPARATOR = /\?.*/;
 
 Router.prototype.configure = function(options) {
   options = options || {};
@@ -460,7 +460,7 @@ Router.prototype.path = function(path, routesFn) {
 };
 
 Router.prototype.dispatch = function(method, path, callback) {
-  var self = this, fns = this.traverse(method, path.replace(QUERY_SEPARATOR, ""), this.routes, ""), invoked = this._invoked, after;
+  var self = this, fns = this.traverse(method, path/*.replace(QUERY_SEPARATOR, "")*/, this.routes, ""), invoked = this._invoked, after;
   this._invoked = true;
   if (!fns || fns.length === 0) {
     this.last = [];
