@@ -1,6 +1,6 @@
 /**
- * @module: nd-router
- * @author: crossjs <liwenfu@crossjs.com> - 2015-04-17 13:44:53
+ * @module Router
+ * @author crossjs <liwenfu@crossjs.com>
  */
 
 'use strict';
